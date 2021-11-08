@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <style>
+        .sliderWrapper {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .slide img {
+            width: 300px;
+            height: 300px;
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+
+
+        .arrow {
+            border: solid black;
+            border-width: 0 8px 8px 0;
+            display: inline-block;
+            padding: 3px;
+            background-color: transparent;
+        }
+
+        .arrow:hover {
+
+            border: solid rgb(207, 76, 76);
+
+            border-width: 0 13px 13px 0;
+        }
+
+        .right {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            position: absolute;
+            left: 20px;
+
+        }
+
+        .left {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            position: absolute;
+            right: 20px;
+        }
+
+        .btnH {
+            height: 30px;
+            width: 30px;
+        }
+
+        .bgC {
+            background-color: rgb(209, 228, 245);
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            /* background-color: red; */
+            color: white;
+            text-align: center;
+        }
+    </style>
+
+    <div class="container-fluid">
+        <div class="header pb-2 pt-2 ">
+            <nav class="navbar navbar-expand-lg navbar-light bgC">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+
+
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="sliderWrapper   ">
+            <div class="slide">
+
+                <img class="img-fluid img-thumbnail" src="./slide1.jpg" alt="">
+            </div>
+            <div class="slide hide">
+
+                <img class="img-fluid img-thumbnail" src="./slide2.jpg" alt="">
+            </div>
+            <div class="slide hide">
+
+                <img class="img-fluid img-thumbnail" src="./slide3.jpg" alt="">
+            </div>
+            <button class="left  arrow btnH" onclick="rightclick()"></button>
+            <button class="right arrow btnH" onclick="leftclick()">
+            </button>
+        </div>
+
+
+        <div class="footer">
+
+
+
+            <h1 class="mt-5 mb-5 text-center bgC">👑 ⚔️ 👑</h1>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
